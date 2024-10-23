@@ -42,7 +42,10 @@ class Counter extends Component{
       counterStyle = { color: "blue" };
     } else if (this.state.a==0) {
         counterStyle = { color: "orange" };
-      } 
+      }
+      else if (this.state.a>15) {
+        counterStyle = { color: "yellow" };
+      }  
      else {
       counterStyle = { color: "green" };
     }
