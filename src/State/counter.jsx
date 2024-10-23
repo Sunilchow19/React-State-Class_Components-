@@ -40,7 +40,10 @@ class Counter extends Component{
       counterStyle = { color: "red" };
     } else if (this.state.a < 0) {
       counterStyle = { color: "blue" };
-    } else {
+    } else if (this.state.a==0) {
+        counterStyle = { color: "orange" };
+      } 
+     else {
       counterStyle = { color: "green" };
     }
 
@@ -50,7 +53,7 @@ class Counter extends Component{
 
 
             
-            <h1>Counter</h1>
+            <h1 style={counterStyle}>Counter</h1>
 
             <button onClick={this.minus} >-</button>
             <span style={counterStyle}>{this.state.a}</span>
